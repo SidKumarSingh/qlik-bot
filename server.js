@@ -1,13 +1,14 @@
 // content of index.js
-const http = require('http')
-const port = 5000
+const http = require('http');
+const port = process.env.PORT || 3000;
 
 const requestHandler = (request, response) => {
   console.log(request.url)
+  response.writeHead(200, {'Content-Type': 'text/plain'});
   response.end('Hello Node.js Server!')
-}
+};
 
-const server = http.createServer(requestHandler)
+const server = http.createServer(requestHandler);
 
 server.listen(port, (err) => {
   if (err) {
@@ -15,4 +16,4 @@ server.listen(port, (err) => {
   }
 
   console.log(`server is listening on ${port}`)
-})
+});
