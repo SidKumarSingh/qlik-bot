@@ -1,19 +1,8 @@
 // content of index.js
 const http = require('http');
-const port = process.env.PORT || 3000;
+const express = require('express');
+const app = express();
 
-const requestHandler = (request, response) => {
-  console.log(request.url)
-  response.writeHead(200, {'Content-Type': 'text/plain'});
-  response.end('Hello Node.js Server!')
-};
+app.get('/', (req, res) => res.send('Hello world from node.js server!'));
 
-const server = http.createServer(requestHandler);
-
-server.listen(port, (err) => {
-  if (err) {
-    return console.log('something bad happened', err)
-  }
-
-  console.log(`server is listening on ${port}`)
-});
+app.listen(3000, () => console.log('Example app listening on port 3000!'));
