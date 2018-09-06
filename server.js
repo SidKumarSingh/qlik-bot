@@ -2,6 +2,9 @@
 
 //require('dotenv').config();
 
+const http = require('http');
+const express = require('express');
+
 const projectId = 'qliksenseai';
 const sessionId = 'quick-session';
 const query = 'hi';
@@ -22,7 +25,7 @@ const sessionClient = new df.SessionsClient(config);
 
 const sessionPath = sessionClient.sessionPath(projectId, sessionId);
 
-const req = {
+const request = {
 	session: sessionPath,
 	queryInput: {
 		text: {
@@ -32,6 +35,31 @@ const req = {
 	}
 };
 
+const app = express();
+
+app.get('/', (req, res) => {
+	sessionClient
+	.detectIntent(request)
+	.then(results => {
+		res.send('Detected intent');
+	    const result = results[0].queryResult;
+	    res.send(`  Query: ${result.queryText}`);
+	    res.send(`  Response: ${result.fulfillmentText}`);
+	    if (result.intent) {
+	      res.send(`  Intent: ${result.intent.displayName}`);
+	    } else {
+	      res.send(`  No intent matched.`);
+	    }
+	})
+	.catch(err => {
+		res.send('ERROR:', err);
+	});
+});
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log('Example app listening on port 3000!'));
+/*
 sessionClient
 	.detectIntent(req)
 	.then(res => {
@@ -47,4 +75,4 @@ sessionClient
 	})
 	.catch(err => {
 		console.error('ERROR:', err);
-	});
+	});*/
