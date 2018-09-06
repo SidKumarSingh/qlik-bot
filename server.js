@@ -1,45 +1,50 @@
 'use strict';
 
-const http = require('http');
-const express = require('express');
-const bodyParser = require('body-parser');
+//require('dotenv').config();
 
-const app = express();
+const projectId = 'qliksenseai';
+const sessionId = 'quick-session';
+const query = 'hi';
+const languageCode = 'en-IN';
 
+const pk = process.env.DIALOGFLOW_PRIVATE_KEY;
+const email = process.env.DIALOGFLOW_CLIENT_EMAIL;
 
-app.get('/', (req, res) => res.send('Hello world from node.js server!'));
+const config = {
+	"credentials": {
+		"private_key": pk,
+	  	"client_email": email
+	}
+};
 
-const port = process.env.PORT || 3000;
+const df = require('dialogflow');
+const sessionClient = new df.SessionsClient(config);
 
-app.listen(port, () => console.log('Example app listening on port 3000!'));
+const sessionPath = sessionClient.sessionPath(projectId, sessionId);
 
-/*app.all('/', (req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
-  next();
- });*/
+const req = {
+	session: sessionPath,
+	queryInput: {
+		text: {
+			text: query,
+			languageCode: languageCode
+		}
+	}
+};
 
-app.use(bodyParser.json());
-
-app.post('/', (req, res) => {
-
-	if(req.body.queryResult.action === 'get_data') {
-		var kpi = req.body.queryResult && req.body.queryResult.parameters && req.body.queryResult.parameters.kpi ? req.body.queryResult.parameters.kpi : 'Unknown';
-	} else {
-		var kpi = 'Unknown';
-	};
-
-	if(kpi==='Unknown') {
-		return res.json({
-			"fulfillmentText": "KPI not found",
-			'source': 'Qlik Sense'
-		});
-	} else {
-		return res.json({
-			'fulfillmentText': "We found KPI revenue for you",
-			'source': 'Qlik Sense'
-		});
-	};
-
-	//res.send('Hello ' + req.body.fname + ' ' + req.body.lname + '! How are you?');
-});
+sessionClient
+	.detectIntent(req)
+	.then(res => {
+		console.log('Detected intent');
+	    const result = res[0].queryResult;
+	    console.log(`  Query: ${result.queryText}`);
+	    console.log(`  Response: ${result.fulfillmentText}`);
+	    if (result.intent) {
+	      console.log(`  Intent: ${result.intent.displayName}`);
+	    } else {
+	      console.log(`  No intent matched.`);
+	    }
+	})
+	.catch(err => {
+		console.error('ERROR:', err);
+	});
