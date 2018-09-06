@@ -4,13 +4,15 @@
 
 const http = require('http');
 const express = require('express');
+const bodyParser = require('body-parser');
+const dialogflow = require('dialogflow');
 
 const projectId = 'qliksenseai';
 const sessionId = 'quick-session';
-const query = 'hi';
+const query = 'what is sales';
 const languageCode = 'en-IN';
 
-console.log(process.env.NODE_ENV);
+//console.log(process.env.NODE_ENV);
 
 const pk = (process.env.NODE_ENV === 'prod') ? JSON.parse(process.env.DIALOGFLOW_PRIVATE_KEY) : process.env.DIALOGFLOW_PRIVATE_KEY;
 const email = process.env.DIALOGFLOW_CLIENT_EMAIL;
@@ -22,8 +24,7 @@ const config = {
 	}
 };
 
-const df = require('dialogflow');
-const sessionClient = new df.SessionsClient(config);
+const sessionClient = new dialogflow.SessionsClient(config);
 
 const sessionPath = sessionClient.sessionPath(projectId, sessionId);
 
@@ -66,20 +67,28 @@ app.get('/', (req, res) => {
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => console.log('Example app listening on port 3000!'));
-/*
-sessionClient
-	.detectIntent(req)
-	.then(res => {
-		console.log('Detected intent');
-	    const result = res[0].queryResult;
-	    console.log(`  Query: ${result.queryText}`);
-	    console.log(`  Response: ${result.fulfillmentText}`);
-	    if (result.intent) {
-	      console.log(`  Intent: ${result.intent.displayName}`);
-	    } else {
-	      console.log(`  No intent matched.`);
-	    }
-	})
-	.catch(err => {
-		console.error('ERROR:', err);
-	});*/
+
+app.use(bodyParser.json());
+
+app.post('/query', (req, res) => {
+
+	if(req.body.queryResult.action === 'get_data') {
+		var kpi = req.body.queryResult && req.body.queryResult.parameters && req.body.queryResult.parameters.kpi ? req.body.queryResult.parameters.kpi : 'Unknown';
+	} else {
+		var kpi = 'Unknown';
+	};
+
+	if(kpi==='Unknown') {
+		return res.json({
+			"fulfillmentText": "KPI not found",
+			'source': 'Qlik Sense'
+		});
+	} else {
+		return res.json({
+			'fulfillmentText': "We found KPI revenue for you",
+			'source': 'Qlik Sense'
+		});
+	};
+
+	//res.send('Hello ' + req.body.fname + ' ' + req.body.lname + '! How are you?');
+});
