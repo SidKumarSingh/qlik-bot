@@ -10,7 +10,9 @@ const sessionId = 'quick-session';
 const query = 'hi';
 const languageCode = 'en-IN';
 
-const pk = process.env.DIALOGFLOW_PRIVATE_KEY;
+console.log(process.env.NODE_ENV);
+
+const pk = (process.env.NODE_ENV === 'prod') ? JSON.parse(process.env.DIALOGFLOW_PRIVATE_KEY) : process.env.DIALOGFLOW_PRIVATE_KEY;
 const email = process.env.DIALOGFLOW_CLIENT_EMAIL;
 
 const config = {
