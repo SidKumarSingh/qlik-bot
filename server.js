@@ -41,15 +41,20 @@ app.get('/', (req, res) => {
 	sessionClient
 	.detectIntent(request)
 	.then(results => {
-		res.send('Detected intent');
-	    const result = results[0].queryResult;
-	    res.send(`  Query: ${result.queryText}`);
-	    res.send(`  Response: ${result.fulfillmentText}`);
+		var body  = 'Detected intent';
+		const result = results[0].queryResult;
+		body += '  Query: ' + result.queryText;
+		body += '  Response: ' + result.fulfillmentText;
+	    //res.send(`  Query: ${result.queryText}`);
+	    //res.send(`  Response: ${result.fulfillmentText}`);
 	    if (result.intent) {
-	      res.send(`  Intent: ${result.intent.displayName}`);
+	    	body += '  Intent: ' + result.intent.displayName;
+	      //res.send(`  Intent: ${result.intent.displayName}`);
 	    } else {
-	      res.send(`  No intent matched.`);
+	    	body += '  No intent matched.';
+	      //res.send(`  No intent matched.`);
 	    }
+	    res.send(body);
 	})
 	.catch(err => {
 		res.send('ERROR:', err);
