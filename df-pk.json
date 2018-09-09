@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "qliksenseai",
+  "private_key_id": "70bf08c61506e532fc653da3d57e4efb7667662a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCk94LXt1jbNv6t\nislnWAga/xzzSEuTZFm3z0VUYWgrIC9M/Rj7hDQkipg+j31IHImKDY95hmv9KGW1\ngun4XOy3X/DcEY7gvaICIOSL7TW3Qq1Om2VuExeOUDw6Ip6lMfBm6YIaEHZhARHA\n/dPPGFpwYHjTd07N3+S2BB6PzshHBbinCD3sXj1lmIKKH1ZyvV9mEQmzicvWyXdj\nJgxfU9ixTvfnKvW5kbI1At/yjoRq7XpD9xPZFmuepxxEN1xJMYUd2ZPoLCtjjJ7+\nFZKe/Sy3lB5sD1aKm5l9/kONsqRpcBBnUzYbzAJDpOxlDDAVr9ycCU7uMovlrQb9\nRX+/sb1vAgMBAAECggEAC1G5ESB8ANgBA/BiHxdbwFp2kTzfLqxeju2ycKFEZV0j\n0bu2HfVKzKJpODWz9Mw8exQGHw0PANkSQtufk+fwYtQQR1Fkb92jLak1yrd1OES4\ny+F+xV2bAAFXuJd33Ow/IMNEpubamzpYY658UkP2BKr3RMSgIXaLj2+wlyaATdsl\nawdVDzFcRQ8BrS1eIHq14CjKAs8stEsDJJaJm2RVYxnW7tXjvwTBIyf480g7irRs\nPbfRkkgGRMUI40F7+HaFsDnSHyPcqsFO8OIjvRab9qoXzKS/AOGSC0jDJmKlLNSK\nj3x7WWqQL+U/ruEfvQvASh/TqK+zDsSz2IgUZlQm5QKBgQDmxHAy95wfByilnsq4\nEZxMtmSy5o314OJzc4xxCsjsUygVoUqUzS0NGODypFvooPTiTYH/l3x7UpwMAiI7\ndpXIpj1t1jDKYxSrFWLpg6pbqa68dXz3a/cI7KsjDGJCildFXfi/LJeFRDAiars0\n+HnvGQYnL2ZXqZZKMWsrkWpqqwKBgQC3ATUa0aDRPBpBxJZ/IlYZ4EzUwBtzFhfH\nVr65CqvXQDkK0ypOQYVXfgtIPCZ5RkviPMyU1/RnyJ1tqXkI/c7vZ44zR60mieMQ\nGzosSVmIAiMRNwge5/VXd3sCa1UEwY6wkCFYgvzyvSDOCAwUp/J1Fe4Jl1gwG/Tj\nAFOcQg74TQKBgQDV0P8wijJSoXxs8JNeN5r9jSYCiRLR1lubo11mRBrktSv31qlW\n9ECg2QNcbyNliPU9VZl067SAQ4uoqLV1KSwhbL6QLZypeWJmHnu2Z7OKGM95eNag\nHZ4X28m5wLiudKXl9OsMn1GJPiPnT8NDklLQUfxchFOsN8qz1dQ52xOh3wKBgEjo\nxD2BEu8JYPSe286e4WrBwBpqxwTc4nBakPWr2LaTMaasZohy9irbXqdSv4lFhmoG\nCwOp3geTF5VfFYeNhuo+eZrYjZVzDfGWx2BpgK/9Gfd701Js24QTaACYvnB8pNqX\nMZHP7fLPgshS0G1SU/ht2j4b+9h+6tudf7IbZ1dpAoGAV+eW+PEUjvMTxlW8iuhK\nm6UNN1fC1I/fXbt5XEHvI3yLv6b5/O+Tntf+MLakx02nTGEKnTBbwuBvSx8WzKmO\nQJHM09SNFltQ4rBvJQbneynNHeo78yX9aDfIciWgyrVVW5lNa2FPgT9xBTcpIsG6\not2OMvfn6RPbpmyBc94c4fw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "qlik-bot@qliksenseai.iam.gserviceaccount.com",
+  "client_id": "115775384052690724931",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/qlik-bot%40qliksenseai.iam.gserviceaccount.com"
+}

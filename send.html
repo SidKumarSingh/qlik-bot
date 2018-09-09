@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test POST send</title>
+	<script type="text/javascript">
+		function postAjax(url, data, success) {
+		    var params = JSON.stringify(data);
+
+		    var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+		    xhr.open('POST', url);
+		    xhr.onreadystatechange = function() {
+		        if (xhr.readyState>3 && xhr.status==200) { success(xhr.responseText); }
+		    };
+		    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+		    xhr.setRequestHeader('Content-Type', 'application/json');
+		    xhr.send(params);
+		    return xhr;
+		}
+
+		// example request with data object
+		function postData() {
+			var fname = document.getElementById("fname").value;
+			var lname = document.getElementById("lname").value;
+			var params = {"fname": fname, "lname": lname};
+			console.log("Params sent:");
+			console.log(params);
+			postAjax('https://qlik-bot.herokuapp.com/', params, function(data) {
+					document.getElementById("result").innerHTML = data;
+					console.log(data); 
+				});
+		}
+	</script>
+</head>
+<body>
+	<form action="javascript:postData();" method="post">
+		<input type="text" id="fname" value="James"><br>
+		<input type="text" id="lname" value="May"><br>
+		<button type="submit" formmethod="post">Click for data send!</button>
+	</form>
+	<div id="result"></div>
+</body>
+</html>
