@@ -1,4 +1,6 @@
 # Custom files
+.env
+df-pk.json
 send.html
 
 # Logs
