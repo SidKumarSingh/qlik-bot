@@ -1,5 +1,9 @@
 'use strict';
 
+module.exports.request = (query, sessionClient) => {
+	
+}
+
 const dialogflow = require('dialogflow');
 
 const pk = (process.env.NODE_ENV === 'prod') ? JSON.parse(process.env.DIALOGFLOW_PRIVATE_KEY) : process.env.DIALOGFLOW_PRIVATE_KEY;

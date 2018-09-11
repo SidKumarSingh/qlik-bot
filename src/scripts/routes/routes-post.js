@@ -1,4 +1,8 @@
 module.exports = (app) => {
+	const bodyParser = require('body-parser');
+	
+	app.use(bodyParser.json());
+
 	app.post('/query', (req, res) => {
 	 	if(req.body.queryResult.action === 'get_data') {
 			var kpi = req.body.queryResult && req.body.queryResult.parameters && req.body.queryResult.parameters.kpi ? req.body.queryResult.parameters.kpi : 'Unknown';
