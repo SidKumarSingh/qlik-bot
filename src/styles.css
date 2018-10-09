@@ -1,2 +1,27 @@
-@import 'node_modules/onsenui/css/onsenui.css';
-@import 'node_modules/onsenui/css/onsen-css-components.css';
+@import '../node_modules/onsenui/css/onsenui.css';
+@import '../node_modules/onsenui/css/onsen-css-components.css';
+
+ons-toolbar {
+	background-color: #296dae !important;
+	height: 10% !important;
+}
+
+div.content, div.background {
+	top: 10% !important;
+	height: 90% !important;
+	background-color: white !important;
+}
+
+div.button {
+	background-color: #c0c0c0 !important;
+}
+
+ons-button {
+	background-color: #c0c0c0 !important;
+	font-weight: bold !important;
+	color: black !important;
+}
+
+div.input {
+	margin: 15px;
+}

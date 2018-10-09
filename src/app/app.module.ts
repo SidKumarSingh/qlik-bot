@@ -21,6 +21,9 @@ import { LoginPageComponent } from './login-page/login-page.component';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
+  entryComponents: [
+    LoginPageComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

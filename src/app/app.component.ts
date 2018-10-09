@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { OnsNavigator } from 'ngx-onsenui';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'StarBot';
+  initialPage = LoginPageComponent;
 }

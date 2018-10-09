@@ -1,3 +1,17 @@
-<p>
-  login-page works!
-</p>
+<ons-toolbar>
+	<div class="center bot-header">
+		<app-header></app-header>
+	</div>
+</ons-toolbar>
+<div class="content">
+	<h1 style="text-align: center; font-weight: bold;">StarBot</h1>
+	<div class = "input" style="left: 15%">
+		<label>Username </label>
+		<ons-input placeholder="" [(value)]="userid" type="email" modifier="underbar"></ons-input>
+	</div>
+	<div class = "input" style="left: 15%">
+		<label>Password </label>
+		<ons-input placeholder="" [(value)]="pswd" type="password" modifier="underbar"></ons-input>
+	</div>
+	<div class="button"><ons-button (click)="login()">Login</ons-button></div>
+</div>

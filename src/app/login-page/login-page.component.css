@@ -1,0 +1,14 @@
+label {
+	vertical-align: bottom;
+	margin-right: 25px;
+}
+
+div.button, div.input {
+	display: table;
+	margin: 35px auto 15px auto;
+}
+
+div.content {
+	display: block;
+	margin: auto;
+}
