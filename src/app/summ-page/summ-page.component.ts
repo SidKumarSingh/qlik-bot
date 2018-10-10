@@ -22,8 +22,8 @@ export class SummPageComponent {
 		this.showDealer = true;
 	}
 
-  	dealerPage() {
-  		this._navigator.element.pushPage(DealerSummPageComponent);
+  dealerPage() {
+  	this._navigator.element.pushPage(DealerSummPageComponent);
   }
 
 }

@@ -83,13 +83,13 @@
 		</ons-list>
 	</div>
 	<br />
-	<div *ngIf="showDealer">
+	<div *ngIf="showDealer" class="all-dealer">
 		<ons-list>
 			<ons-list-item tappable>See all dealers</ons-list-item>
 		</ons-list>
 	</div>
 	<div class="btn-table">
-		<div *ngIf="!showSalesSumm && !showDealer" class="btn-cell"><ons-button class="two-btn" (click)="showSales()">See sales performance</ons-button></div>
+		<div *ngIf="!showSalesSumm" class="btn-cell"><ons-button class="{{!showDealer?'two-btn':'one-btn button'}}" (click)="showSales()">See sales performance</ons-button></div>
 		<div *ngIf="!showDealer" class="btn-cell"><ons-button class="{{!showSalesSumm?'two-btn':'one-btn button'}}" (click)="showDealerAct()">See dealer action items</ons-button></div>
 	</div>
 </div>

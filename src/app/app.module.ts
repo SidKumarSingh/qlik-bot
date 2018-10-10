@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SummPageComponent } from './summ-page/summ-page.component';
 import { DealerSummPageComponent } from './dealer-summ-page/dealer-summ-page.component';
+import { DealerDetailPageComponent } from './dealer-detail-page/dealer-detail-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DealerSummPageComponent } from './dealer-summ-page/dealer-summ-page.com
     HeaderComponent,
     LoginPageComponent,
     SummPageComponent,
-    DealerSummPageComponent
+    DealerSummPageComponent,
+    DealerDetailPageComponent
   ],
   imports: [
     BrowserModule,

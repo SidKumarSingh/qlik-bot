@@ -1,41 +1,12 @@
-div.welcome {
+div.welcome, div.all-dealer {
 	display: block;
-	margin: 5%;
+	margin: 5% auto 5% auto;
 }
 
-div.btn-table, div.segment {
+div.segment {
 	display: table;
 	text-align: center;
 	width: 100%;
-}
-
-div.btn-row {
-	display: table-row;
-	text-align: center;
-	padding: auto;
-}
-
-div.btn-cell {
-	display: table-cell;
-	text-align: center;
-	width: 50%;
-}
-
-ons-button.dealer-btn {
-	font-size: 90%;
-	margin: auto;
-}
-
-ons-button.two-btn {
-	width: 80%;
-}
-
-ons-button.one-btn {
-	width: 40%;
-}
-
-div.card-head {
-	text-align: center;
 }
 
 div.seg-head {

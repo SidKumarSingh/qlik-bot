@@ -22,7 +22,31 @@ ons-button {
 	white-space: normal !important;
 }
 
+ons-button.two-btn {
+	width: 80%;
+}
+
+ons-button.one-btn {
+	width: 40%;
+}
+
 table.btn {
 	table-layout: fixed;
 	width: 100%;
+}
+
+div.card-head {
+	text-align: center;
+}
+
+div.btn-table {
+	display: table;
+	text-align: center;
+	width: 100%;
+}
+
+div.btn-cell {
+	display: table-cell;
+	text-align: center;
+	width: 50%;
 }
