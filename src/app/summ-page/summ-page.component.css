@@ -9,10 +9,20 @@ div.btn-table, div.segment {
 	width: 100%;
 }
 
+div.btn-row {
+	display: table-row;
+	text-align: center;
+	padding: auto;
+}
+
 div.btn-cell {
 	display: table-cell;
 	text-align: center;
 	width: 50%;
+}
+
+ons-button.dealer-btn {
+	font-size: 90%;
 	margin: auto;
 }
 
@@ -25,9 +35,7 @@ ons-button.one-btn {
 }
 
 div.card-head {
-	font-weight: bold;
 	text-align: center;
-	font-size: 110%;
 }
 
 div.seg-head {
@@ -40,4 +48,8 @@ ons-segment.segment {
 	width: 80%;
 	text-align: center;
 	margin: 3% auto auto auto;
+}
+
+div.sales, div.cap, div.units {
+	margin: 2% auto 2% auto;
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import * as ons from 'onsenui';
+import { DealerSummPageComponent } from '../dealer-summ-page/dealer-summ-page.component';
+import { OnsNavigator } from 'ngx-onsenui';
 
 @Component({
   selector: 'ons-page',
@@ -8,15 +9,21 @@ import * as ons from 'onsenui';
 })
 export class SummPageComponent {
 
-  showSalesSumm: boolean = false;
+  constructor (private _navigator: OnsNavigator) {};
+
+	showSalesSumm: boolean = false;
   showDealer: boolean = false;
 
   showSales() {
-  	this.showSalesSumm = true;
-  }
+    this.showSalesSumm = true;
+	}
 
-  showDealerAct() {
-  	this.showDealer = true;
+	showDealerAct() {
+		this.showDealer = true;
+	}
+
+  	dealerPage() {
+  		this._navigator.element.pushPage(DealerSummPageComponent);
   }
 
 }

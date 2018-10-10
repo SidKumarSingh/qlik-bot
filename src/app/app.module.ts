@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SummPageComponent } from './summ-page/summ-page.component';
+import { DealerSummPageComponent } from './dealer-summ-page/dealer-summ-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LoginPageComponent,
-    SummPageComponent
+    SummPageComponent,
+    DealerSummPageComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { SummPageComponent } from './summ-page/summ-page.component';
   ],
   entryComponents: [
     LoginPageComponent,
-    SummPageComponent
+    SummPageComponent,
+    DealerSummPageComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

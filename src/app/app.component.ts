@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoginPageComponent } from './login-page/login-page.component';
+// import { LoginPageComponent } from './login-page/login-page.component';
 import { SummPageComponent } from './summ-page/summ-page.component';
 import { OnsNavigator } from 'ngx-onsenui';
 
@@ -10,5 +10,5 @@ import { OnsNavigator } from 'ngx-onsenui';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  initialPage = LoginPageComponent;
+  initialPage = SummPageComponent;
 }

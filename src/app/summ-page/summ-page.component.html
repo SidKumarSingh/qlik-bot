@@ -6,22 +6,90 @@
 <div class="content">
 	<ons-card>Hi Harvindar Sharma. Welcome to StarBot!</ons-card>
 	<ons-card *ngIf="showSalesSumm">
-		<div class="card-head">Sales performance</div>
-		<div class="btn-table">
-			<ons-segment #segment class="segment" id="segment">
-	            <button class="seg-btn">MTD</button>
-	            <button class="seg-btn">QTD</button>
-	            <button class="seg-btn">YTD</button>
-        	</ons-segment>
-		</div>
-		<div class="seg-head">
-			<span *ngIf="segment.getActiveButtonIndex() + 1 === 1">Aug '18 vs Aug '17</span>
-			<span *ngIf="segment.getActiveButtonIndex() + 1 === 2">Q2 '19 vs Q2 '18</span>
-			<span *ngIf="segment.getActiveButtonIndex() + 1 === 3">FY '19 vs FY '18</span>	
+		<div class="title card-head">Sales performance</div>
+		<div class="content">
+			<div class="btn-table">
+				<ons-segment #segment class="segment" id="segment">
+		            <button class="seg-btn">MTD</button>
+		            <button class="seg-btn">QTD</button>
+		            <button class="seg-btn">YTD</button>
+	        	</ons-segment>
+			</div>
+			<div class="seg-head">
+				<span *ngIf="segment.getActiveButtonIndex() + 1 === 1">
+					Aug '18 vs Aug '17
+				</span>
+				
+				<span *ngIf="segment.getActiveButtonIndex() + 1 === 2">
+					Q2 '19 vs Q2 '18
+				</span>
+				
+				<span *ngIf="segment.getActiveButtonIndex() + 1 === 3">
+					FY '19 vs FY '18
+				</span>	
+			</div>
+			<div class="seg-body">
+				<div class="sales">Net sales:
+					<span class="rupee">&#8377;</span>
+					
+					<span *ngIf="segment.getActiveButtonIndex() + 1 === 1">
+						65.9 lakhs (+18%)
+					</span>
+					
+					<span *ngIf="segment.getActiveButtonIndex() + 1 === 2">
+						110.4 lakhs (-4%)
+					</span>
+					
+					<span *ngIf="segment.getActiveButtonIndex() + 1 === 3">
+						4.5 cr (+2%)
+					</span>	
+				</div>
+				<div class="cap">Capacity:
+					<span *ngIf="segment.getActiveButtonIndex() + 1 === 1">
+						179 tons (+23%)
+					</span>
+					
+					<span *ngIf="segment.getActiveButtonIndex() + 1 === 2">
+						270 tons (-12%)
+					</span>
+					
+					<span *ngIf="segment.getActiveButtonIndex() + 1 === 3">
+						912 tons (+8%)
+					</span>	
+				</div>
+				<div class="units">Units sold:
+					<span *ngIf="segment.getActiveButtonIndex() + 1 === 1">
+						58 units (+19%)
+					</span>
+					
+					<span *ngIf="segment.getActiveButtonIndex() + 1 === 2">
+						138 units (+1%)
+					</span>
+					
+					<span *ngIf="segment.getActiveButtonIndex() + 1 === 3">
+						339 units (+4%)
+					</span>	
+				</div>
+			</div>
 		</div>
 	</ons-card>
+	<div *ngIf="showDealer" class="dealer-list">
+		<ons-list class="dealer-act">
+			<ons-list-header>Dealer action items</ons-list-header>
+			<ons-list-item modifier="chevron" tappable>Lynx Communications Systems Pvt. Ltd.</ons-list-item>
+			<ons-list-item modifier="chevron" tappable (click)="dealerPage()">Kanchan Agencies</ons-list-item>
+			<ons-list-item modifier="chevron" tappable>Air Service Engg & Associate</ons-list-item>
+			<ons-list-item modifier="chevron" tappable>Madan Gopal & Co.</ons-list-item>
+		</ons-list>
+	</div>
+	<br />
+	<div *ngIf="showDealer">
+		<ons-list>
+			<ons-list-item tappable>See all dealers</ons-list-item>
+		</ons-list>
+	</div>
 	<div class="btn-table">
-		<div *ngIf="!showSalesSumm" class="btn-cell"><ons-button class="two-btn" (click)="showSales()">See sales<br />performance</ons-button></div>
-		<div class="btn-cell"><ons-button class="{{!showSalesSumm?'two-btn':'one-btn button'}}" (click)="showDealerAct()">See dealer<br />action items</ons-button></div>
+		<div *ngIf="!showSalesSumm && !showDealer" class="btn-cell"><ons-button class="two-btn" (click)="showSales()">See sales performance</ons-button></div>
+		<div *ngIf="!showDealer" class="btn-cell"><ons-button class="{{!showSalesSumm?'two-btn':'one-btn button'}}" (click)="showDealerAct()">See dealer action items</ons-button></div>
 	</div>
 </div>
