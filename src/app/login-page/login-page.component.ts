@@ -14,7 +14,7 @@ export class LoginPageComponent {
 		if(this.userid==='harvindar.sharma@bluestarindia.com' && this.pswd==='topsecret') {
 			ons.notification.alert('Login successful');
 		} else {
-			ons.notification.toast('Invalid login details', {timeout: 3000});
+			ons.notification.toast('Invalid login details', {timeout: 2000});
 			this.pswd='';
 		}
 	}
