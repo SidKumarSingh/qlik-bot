@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { OnsNavigator } from 'ngx-onsenui';
-// import { SummPageComponent } from '../summ-page/summ-page.component';
+import { DealerSalesPageComponent } from '../dealer-sales-page/dealer-sales-page.component';
 
 @Component({
   selector: 'ons-page',

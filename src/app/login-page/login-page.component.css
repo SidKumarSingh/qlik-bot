@@ -3,9 +3,9 @@ label {
 	margin-right: 25px;
 }
 
-div.button, div.input {
+div.input {
 	display: table;
-	margin: 35px auto 15px auto;
+	margin: 10% auto 15% auto;
 }
 
 div.content {
