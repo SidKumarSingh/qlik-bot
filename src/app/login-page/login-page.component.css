@@ -11,4 +11,5 @@ div.button, div.input {
 div.content {
 	display: block;
 	margin: auto;
+	background-color: white !important;
 }

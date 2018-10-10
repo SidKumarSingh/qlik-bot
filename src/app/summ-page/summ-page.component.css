@@ -1,0 +1,43 @@
+div.welcome {
+	display: block;
+	margin: 5%;
+}
+
+div.btn-table, div.segment {
+	display: table;
+	text-align: center;
+	width: 100%;
+}
+
+div.btn-cell {
+	display: table-cell;
+	text-align: center;
+	width: 50%;
+	margin: auto;
+}
+
+ons-button.two-btn {
+	width: 80%;
+}
+
+ons-button.one-btn {
+	width: 40%;
+}
+
+div.card-head {
+	font-weight: bold;
+	text-align: center;
+	font-size: 110%;
+}
+
+div.seg-head {
+	font-weight: bold;
+	text-align: center;
+	margin: 3% auto 3% auto;
+}
+
+ons-segment.segment {
+	width: 80%;
+	text-align: center;
+	margin: 3% auto auto auto;
+}

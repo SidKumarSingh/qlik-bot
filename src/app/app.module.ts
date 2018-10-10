@@ -7,12 +7,14 @@ import { OnsenModule } from 'ngx-onsenui';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { SummPageComponent } from './summ-page/summ-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    SummPageComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { LoginPageComponent } from './login-page/login-page.component';
     CUSTOM_ELEMENTS_SCHEMA
   ],
   entryComponents: [
-    LoginPageComponent
+    LoginPageComponent,
+    SummPageComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
