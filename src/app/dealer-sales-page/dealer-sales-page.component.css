@@ -1,3 +1,25 @@
 div.tab-page {
 	top: 5% !important;
 }
+
+div.segment {
+	display: table;
+	text-align: center;
+	width: 100%;
+}
+
+div.seg-head {
+	font-weight: bold;
+	text-align: center;
+	margin: 3% auto 3% auto;
+}
+
+ons-segment.segment {
+	width: 80%;
+	text-align: center;
+	margin: 3% auto auto auto;
+}
+
+div.sales, div.cap, div.units {
+	margin: 2% auto 2% auto;
+}
