@@ -1,0 +1,9 @@
+div.tab-page {
+	top: 5% !important;
+}
+
+div.os-list {
+	margin: 5% auto 5% auto;
+	#vertical-align: bottom;
+}
+
