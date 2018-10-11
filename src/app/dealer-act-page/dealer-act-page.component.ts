@@ -3,10 +3,10 @@ import { OnsNavigator } from 'ngx-onsenui';
 
 @Component({
   selector: 'ons-page',
-  templateUrl: './dealer-sales-page.component.html',
-  styleUrls: ['./dealer-sales-page.component.css']
+  templateUrl: './dealer-act-page.component.html',
+  styleUrls: ['./dealer-act-page.component.css']
 })
-export class DealerSalesPageComponent {
+export class DealerActPageComponent {
 
 	constructor (private _navigator: OnsNavigator) {};
 

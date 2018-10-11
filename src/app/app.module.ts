@@ -4,14 +4,18 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { OnsenModule } from 'ngx-onsenui';
 
+import { Globals } from './globals';
+
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SummPageComponent } from './summ-page/summ-page.component';
-import { DealerSummPageComponent } from './dealer-summ-page/dealer-summ-page.component';
 import { DealerSalesPageComponent } from './dealer-sales-page/dealer-sales-page.component';
 import { DealerOutsPageComponent } from './dealer-outs-page/dealer-outs-page.component';
 import { DealerIncPageComponent } from './dealer-inc-page/dealer-inc-page.component';
+import { DealerPageComponent } from './dealer-page/dealer-page.component';
+import { DealerActPageComponent } from './dealer-act-page/dealer-act-page.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +23,11 @@ import { DealerIncPageComponent } from './dealer-inc-page/dealer-inc-page.compon
     HeaderComponent,
     LoginPageComponent,
     SummPageComponent,
-    DealerSummPageComponent,
     DealerSalesPageComponent,
     DealerOutsPageComponent,
-    DealerIncPageComponent
+    DealerIncPageComponent,
+    DealerPageComponent,
+    DealerActPageComponent
   ],
   imports: [
     BrowserModule,
@@ -34,10 +39,11 @@ import { DealerIncPageComponent } from './dealer-inc-page/dealer-inc-page.compon
   entryComponents: [
     LoginPageComponent,
     SummPageComponent,
-    DealerSummPageComponent,
     DealerSalesPageComponent,
     DealerOutsPageComponent,
-    DealerIncPageComponent
+    DealerIncPageComponent,
+    DealerActPageComponent,
+    DealerPageComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

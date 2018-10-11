@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
 //import { LoginPageComponent } from './login-page/login-page.component';
-import {DealerSummPageComponent } from './dealer-summ-page/dealer-summ-page.component';
-import {DealerSalesPageComponent } from './dealer-sales-page/dealer-sales-page.component';
-import {DealerOutsPageComponent } from './dealer-outs-page/dealer-outs-page.component';
-import {DealerIncPageComponent } from './dealer-inc-page/dealer-inc-page.component';
-import { OnsNavigator } from 'ngx-onsenui';
-
+//import { SummPageComponent } from './summ-page/summ-page.component';
+import { DealerPageComponent } from './dealer-page/dealer-page.component';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +9,5 @@ import { OnsNavigator } from 'ngx-onsenui';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  initialPage = DealerSummPageComponent;
-  tab1 = DealerSummPageComponent;
-  tab2 = DealerSalesPageComponent;
-  tab3 = DealerOutsPageComponent;
-  tab4 = DealerIncPageComponent;
+  initialPage = DealerPageComponent;
 }

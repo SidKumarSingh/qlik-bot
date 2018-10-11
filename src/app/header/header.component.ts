@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {Globals} from '../globals'
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
