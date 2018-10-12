@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { DealerPageComponent } from '../dealer-page/dealer-page.component';
+import { DealerListPageComponent } from '../dealer-list-page/dealer-list-page.component';
+
 import { OnsNavigator } from 'ngx-onsenui';
 
 @Component({
@@ -24,6 +26,10 @@ export class SummPageComponent {
 
   dealerPage() {
   	this._navigator.element.pushPage(DealerPageComponent);
+  }
+
+  dealerList() {
+    this._navigator.element.pushPage(DealerListPageComponent);
   }
 
 }

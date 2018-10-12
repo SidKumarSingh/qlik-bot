@@ -11,5 +11,17 @@ div.input {
 div.content {
 	display: block;
 	margin: auto;
-	background-color: white !important;
+}
+
+h1.app-title {
+	text-align: center;
+	font-weight: bold;
+	background-color: white;
+	line-height: 300%;
+	margin-top: 15%;
+}
+
+div.login-card {
+	display: table;
+	margin: auto auto 2% auto;
 }

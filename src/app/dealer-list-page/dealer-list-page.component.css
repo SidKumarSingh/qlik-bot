@@ -1,0 +1,32 @@
+div.dealer-list {
+	margin-bottom: 3%;
+	max-height: 66%;
+	overflow: auto;
+}
+
+span.red-act {
+	background-color: #ff6666;
+}
+
+span.yellow-act {
+	background-color: #e0e066;
+}
+
+span.green-act {
+	background-color: #66c166;
+}
+
+ons-list.dealer-list {
+	max-height: 100%;
+}
+
+div.title-dl {
+	background-color: white;
+	text-align: center;
+	line-height: 300%;
+	font-size: 120%;
+	margin-top: 3%;
+	vertical-align: middle;
+	border-bottom: thin solid #d6d6d6;
+	border-top: thin solid #d6d6d6;
+}

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { OnsenModule } from 'ngx-onsenui';
 
@@ -16,6 +16,7 @@ import { DealerOutsPageComponent } from './dealer-outs-page/dealer-outs-page.com
 import { DealerIncPageComponent } from './dealer-inc-page/dealer-inc-page.component';
 import { DealerPageComponent } from './dealer-page/dealer-page.component';
 import { DealerActPageComponent } from './dealer-act-page/dealer-act-page.component';
+import { DealerListPageComponent } from './dealer-list-page/dealer-list-page.component';
 
 @NgModule({
   declarations: [
@@ -27,11 +28,13 @@ import { DealerActPageComponent } from './dealer-act-page/dealer-act-page.compon
     DealerOutsPageComponent,
     DealerIncPageComponent,
     DealerPageComponent,
-    DealerActPageComponent
+    DealerActPageComponent,
+    DealerListPageComponent
   ],
   imports: [
     BrowserModule,
-    OnsenModule
+    OnsenModule,
+    FormsModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -43,7 +46,8 @@ import { DealerActPageComponent } from './dealer-act-page/dealer-act-page.compon
     DealerOutsPageComponent,
     DealerIncPageComponent,
     DealerActPageComponent,
-    DealerPageComponent
+    DealerPageComponent,
+    DealerListPageComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

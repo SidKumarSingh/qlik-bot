@@ -74,15 +74,27 @@
 	<div *ngIf="showDealer" class="dealer-list">
 		<ons-list class="dealer-act">
 			<ons-list-header>Top action items</ons-list-header>
-			<ons-list-item modifier="chevron" tappable>Lynx Communications Systems Pvt. Ltd.</ons-list-item>
-			<ons-list-item modifier="chevron" tappable (click)="dealerPage()">Kanchan Agencies</ons-list-item>
-			<ons-list-item modifier="chevron" tappable>Air Service Engg & Associate</ons-list-item>
-			<ons-list-item modifier="chevron" tappable>Madan Gopal & Co.</ons-list-item>
+			<ons-list-item modifier="chevron" tappable>
+				<div class="letf">Lynx Communications Systems Pvt. Ltd.</div>
+				<div class="right"><span class="notification red-act">4</span></div>
+			</ons-list-item>
+			<ons-list-item modifier="chevron" tappable (click)="dealerPage()">
+				<div class="left">Kanchan Agencies</div>
+				<div class="right"><span class="notification red-act">3</span></div>
+			</ons-list-item>
+			<ons-list-item modifier="chevron" tappable>
+				<div class="left">Air Service Engg & Associate</div>
+				<div class="right"><span class="notification yellow-act">1</span></div>
+			</ons-list-item>
+			<ons-list-item modifier="chevron" tappable>
+				<div class="left">Madan Gopal & Co.</div>
+				<div class="right"><span class="notification yellow-act">1</span></div>
+			</ons-list-item>
 		</ons-list>
 	</div>
 	<div *ngIf="showDealer" class="all-dealer">
 		<ons-list>
-			<ons-list-item tappable>See all dealers</ons-list-item>
+			<ons-list-item tappable (click)="dealerList()">See all dealers</ons-list-item>
 		</ons-list>
 	</div>
 	<div class="btn-table">

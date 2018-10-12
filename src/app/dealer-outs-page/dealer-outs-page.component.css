@@ -1,9 +1,27 @@
-div.tab-page {
-	top: 5% !important;
-}
-
-div.os-list {
+div.os-total, os-bucket, os-amt {
 	margin: 5% auto 5% auto;
-	#vertical-align: bottom;
 }
 
+div.os-bucket {
+	display: table;
+}
+
+div.os-label, div.os-select {
+	display: table-cell;
+	margin: auto;
+	padding-right: 5%;
+}
+
+div.os-select {
+	text-align: center;
+}
+
+div.os-label {
+	vertical-align: middle;
+}
+
+div.os-amt {
+	text-align: center;
+	font-weight: bold;
+	margin-top: 10%;
+}

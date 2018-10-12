@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OnsNavigator } from 'ngx-onsenui';
 
 @Component({
   selector: 'ons-page',
@@ -7,6 +8,10 @@ import { Component } from '@angular/core';
 })
 export class DealerIncPageComponent {
 
-  
+	constructor (private _navigator: OnsNavigator) {};
+
+	summPage() {
+		this._navigator.element.popPage();
+	}  
 
 }

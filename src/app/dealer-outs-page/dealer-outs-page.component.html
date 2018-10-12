@@ -3,24 +3,22 @@
 		<div class="title card-head">Kanchan Agencies</div>
 	</ons-card>
 	<ons-card>
-		<div class="os-list">Total outstanding: <span class="rupee">&#8377;</span>1,62,450</div>
-		<div class="os-list">
-			<div>Outstanding bucket</div>
-			<div class="content os-carousel">
-				<div class="left"><ons-button (click)="prevBucket()">Prev</ons-button></div>
-				<div class="center">
-					<ons-carousel #carousel swipeable auto-scroll overscrollable id="carousel">
-				        <ons-carousel-item>1-30 days</ons-carousel-item>
-				        <ons-carousel-item>31-60 days</ons-carousel-item>
-				        <ons-carousel-item>61-90 days</ons-carousel-item>
-				        <ons-carousel-item>91-180 days</ons-carousel-item>
-			    	</ons-carousel>
-			    </div>
-			    <div class="right"><ons-button (click)="nextBucket()">Next</ons-button></div>
-			</div>
+		<div class="os-total">Total outstanding: <span class="rupee">&#8377;</span> 55,25,312.29</div>
+		<div class="os-bucket">
+			<div class="os-label">Outstanding older than</div>
+			<div class="os-select">
+				<ons-select class="os-list" [(ngModel)]="selectedBucket" modifier="underbar">
+		        	<option *ngFor="let bucket of buckets" [value]="bucket.value">
+		        		{{ bucket.label }}
+		        	</option>
+		    	</ons-select>
+		    </div>
+		</div>
+		<div class="os-amt">
+			<span class="rupee">&#8377;</span> {{ buckets[selectedBucket].amt }}
 		</div>
 	</ons-card>
 	<div class="btn-table">
-		<div class="btn-cell"><ons-button class="one-btn" (click)="summPage()">Home</ons-button></div>
+		<div class="btn-cell"><ons-button class="one-btn" (click)="summPage()">Back</ons-button></div>
 	</div>
 </div>
