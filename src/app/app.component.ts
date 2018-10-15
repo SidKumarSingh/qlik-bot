@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { LoginPageComponent } from './login-page/login-page.component';
+//import { LoginPageComponent } from './login-page/login-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,6 @@ import { LoginPageComponent } from './login-page/login-page.component';
 })
 export class AppComponent {
 
-	initialPage = LoginPageComponent;
-
+	initialPage = HomePageComponent;
+	
 }

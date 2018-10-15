@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
+import { OnsNavigator } from 'ngx-onsenui';
+
 import { DealerPageComponent } from '../dealer-page/dealer-page.component';
 import { DealerListPageComponent } from '../dealer-list-page/dealer-list-page.component';
-
-import { OnsNavigator } from 'ngx-onsenui';
 
 @Component({
   selector: 'ons-page',

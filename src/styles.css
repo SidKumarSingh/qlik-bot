@@ -3,7 +3,29 @@
 
 ons-toolbar {
 	background-color: #296dae !important;
-	height: 10% !important;
+	height: 8% !important;
+}
+
+ons-toolbar-button.home-menu {
+	display: block;
+	margin: auto;
+}
+
+ons-icon.home-menu {
+	color: white;
+	display: block;
+	margin: auto;
+	font-size: 300% !important;
+}
+
+div.bot-header {
+	display: table;
+	margin: auto;
+}
+
+img.logo {
+	display: table;
+	margin: auto;
 }
 
 div.content, div.background {

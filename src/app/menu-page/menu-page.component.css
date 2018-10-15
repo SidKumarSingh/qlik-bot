@@ -1,0 +1,9 @@
+h2.menu-header {
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	display: table;
+	margin: auto;
+	height: 100%;
+	line-height: 250%;
+}
