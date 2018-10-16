@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { DealerActPageComponent } from '../dealer-act-page/dealer-act-page.component';
 import { DealerSalesPageComponent } from '../dealer-sales-page/dealer-sales-page.component';
 import { DealerOutsPageComponent } from '../dealer-outs-page/dealer-outs-page.component';

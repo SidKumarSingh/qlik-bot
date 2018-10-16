@@ -16,4 +16,12 @@ export class DealerActPageComponent {
 		this._navigator.element.popPage();
 	}
 
+	get markComplete(): boolean {
+		return this.globals.markComplete;
+	}
+
+	set markComplete(value: boolean) {
+		this.globals.markComplete = value;
+	}
+
 }

@@ -33,4 +33,8 @@ export class SummPageComponent {
     this._navigator.element.pushPage(DealerListPageComponent);
   }
 
+  get markComplete(): boolean {
+    return this.globals.markComplete;
+  }
+
 }
