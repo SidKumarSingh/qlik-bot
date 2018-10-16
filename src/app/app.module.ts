@@ -4,9 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { OnsenModule } from 'ngx-onsenui';
 
-//import { Globals } from './globals';
-
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginPageComponent } from './login-page/login-page.component';
@@ -21,6 +18,7 @@ import { MenuPageComponent } from './menu-page/menu-page.component';
 import { MenuButtonComponent } from './menu-button/menu-button.component';
 import { HomeMenuService } from './home-menu.service';
 import { HomePageComponent } from './home-page/home-page.component';
+import { GlobalsService } from './globals.service';
 
 @NgModule({
   declarations: [
@@ -58,7 +56,7 @@ import { HomePageComponent } from './home-page/home-page.component';
     DealerListPageComponent,
     MenuPageComponent
   ],
-  providers: [HomeMenuService],
+  providers: [HomeMenuService, GlobalsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,6 +3,7 @@ import { OnsNavigator } from 'ngx-onsenui';
 
 import { DealerPageComponent } from '../dealer-page/dealer-page.component';
 import { DealerListPageComponent } from '../dealer-list-page/dealer-list-page.component';
+import { GlobalsService } from '../globals.service';
 
 @Component({
   selector: 'ons-page',
@@ -11,7 +12,7 @@ import { DealerListPageComponent } from '../dealer-list-page/dealer-list-page.co
 })
 export class SummPageComponent {
 
-  constructor (private _navigator: OnsNavigator) {};
+  constructor (private _navigator: OnsNavigator, private globals: GlobalsService) { };
 
 	showSalesSumm: boolean = false;
   showDealer: boolean = false;

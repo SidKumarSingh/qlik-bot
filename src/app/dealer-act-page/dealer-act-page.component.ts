@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { OnsNavigator } from 'ngx-onsenui';
 
+import { GlobalsService } from '../globals.service';
+
 @Component({
   selector: 'ons-page',
   templateUrl: './dealer-act-page.component.html',
@@ -8,7 +10,7 @@ import { OnsNavigator } from 'ngx-onsenui';
 })
 export class DealerActPageComponent {
 
-	constructor (private _navigator: OnsNavigator) {};
+	constructor (private _navigator: OnsNavigator, private globals: GlobalsService) { };
 
 	summPage() {
 		this._navigator.element.popPage();

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import * as ons from 'onsenui';
-import { SummPageComponent } from '../summ-page/summ-page.component';
 import { OnsNavigator } from 'ngx-onsenui';
+
+import { HomePageComponent } from '../home-page/home-page.component';
 
 @Component({
   selector: 'ons-page',
@@ -18,7 +19,7 @@ export class LoginPageComponent {
 	
 	login() {
 		if(this.userid==='harvindar.sharma@bluestarindia.com' && this.pswd==='topsecret') {
-			this._navigator.element.pushPage(SummPageComponent);
+			this._navigator.element.pushPage(HomePageComponent);
 		} else {
 			ons.notification.toast('Invalid login details', {timeout: 2000});
 			this.pswd='';
