@@ -14,15 +14,12 @@ export class SummPageComponent {
 
   constructor (private _navigator: OnsNavigator, private globals: GlobalsService) { };
 
-	showSalesSumm: boolean = false;
-  showDealer: boolean = false;
-
-  showSales() {
-    this.showSalesSumm = true;
+	showSales() {
+    this.globals.showSalesSumm = true;
 	}
 
 	showDealerAct() {
-		this.showDealer = true;
+		this.globals.showDealer = true;
 	}
 
   dealerPage() {
@@ -35,6 +32,14 @@ export class SummPageComponent {
 
   get markComplete(): boolean {
     return this.globals.markComplete;
+  }
+
+  get showSalesSumm() {
+    return this.globals.showSalesSumm;
+  }
+
+  get showDealer() {
+    return this.globals.showDealer;
   }
 
 }

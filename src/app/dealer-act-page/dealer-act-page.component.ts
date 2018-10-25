@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { OnsNavigator } from 'ngx-onsenui';
 
+import { HomePageComponent } from '../home-page/home-page.component';
 import { GlobalsService } from '../globals.service';
 
 @Component({
@@ -16,12 +17,18 @@ export class DealerActPageComponent {
 		this._navigator.element.popPage();
 	}
 
-	get markComplete(): boolean {
+	homePage() {
+		this.globals.showSalesSumm = false;
+		this.globals.showDealer = false;
+		this._navigator.element.resetToPage(HomePageComponent,{pop: true});
+	}
+
+	get markComplete() {
 		return this.globals.markComplete;
 	}
 
-	set markComplete(value: boolean) {
-		this.globals.markComplete = value;
+	set markComplete(val: boolean) {
+		this.globals.markComplete = val;
 	}
 
 }

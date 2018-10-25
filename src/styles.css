@@ -29,12 +29,8 @@ img.logo {
 }
 
 div.content, div.background {
-	margin-top: 6%;
+	margin-top: 4%;
 	height: 100% !important;
-}
-
-div.button {
-	background-color: #c0c0c0 !important;
 }
 
 ons-button {

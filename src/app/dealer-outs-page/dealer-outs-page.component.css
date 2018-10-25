@@ -25,3 +25,9 @@ div.os-amt {
 	font-weight: bold;
 	margin-top: 10%;
 }
+
+ons-button.inv-button {
+	background-color: white !important;
+	color: #0076ff !important;
+	font-weight: normal !important;
+}

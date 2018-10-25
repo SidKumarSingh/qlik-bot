@@ -1,4 +1,4 @@
-<ons-toolbar>
+<ons-toolbar static modifier="cover-content">
 	<div class="left home-menu">
 		
 	</div>
@@ -6,6 +6,12 @@
 		<app-header></app-header>
 	</div>
 </ons-toolbar>
+
+<ons-splitter #splitter>
+	<ons-splitter-side [page]="sidePage" side="left" width="60%" collapse swipeable></ons-splitter-side>
+
+	<ons-splitter-content [page]="contentPage"></ons-splitter-content>
+</ons-splitter>
 
 <ons-tabbar position="bottom" animation="none">
 	<ons-tab [page]="tab1" icon="fa-exclamation-triangle" label="Action Items" active></ons-tab>

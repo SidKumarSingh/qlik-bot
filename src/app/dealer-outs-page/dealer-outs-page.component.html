@@ -17,8 +17,18 @@
 		<div class="os-amt">
 			<span class="rupee">&#8377;</span> {{ buckets[selectedBucket].amt }}
 		</div>
+		<div class="see-invoice">
+			<ons-button modifier="large--quiet" class="inv-button">
+				<ons-icon icon="fa-file-alt" class="far"></ons-icon>&nbsp;&nbsp;See invoices
+			</ons-button>
+		</div>
 	</ons-card>
 	<div class="btn-table">
-		<div class="btn-cell"><ons-button class="one-btn" (click)="summPage()">Back</ons-button></div>
+		<div class="btn-cell">
+			<ons-button class="two-btn" (click)="homePage()">Home</ons-button>
+		</div>
+		<div class="btn-cell">
+			<ons-button class="two-btn" (click)="summPage()">Back</ons-button>
+		</div>
 	</div>
 </div>

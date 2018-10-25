@@ -18,7 +18,7 @@ export class LoginPageComponent {
 	pswd: string = '';
 	
 	login() {
-		if(this.userid==='harvindar.sharma@bluestarindia.com' && this.pswd==='topsecret') {
+		if(this.userid==='harvindar.sharma@bluestarindia.com' && this.pswd==='a') {
 			this._navigator.element.pushPage(HomePageComponent);
 		} else {
 			ons.notification.toast('Invalid login details', {timeout: 2000});
